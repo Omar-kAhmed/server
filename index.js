@@ -18,9 +18,9 @@ connection();
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: process.env.CLIENT_ORIGIN, // Ensure this matches your frontend URL
+    origin: '*', // Ensure this matches your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    credentials: false,
 }));
 
 
